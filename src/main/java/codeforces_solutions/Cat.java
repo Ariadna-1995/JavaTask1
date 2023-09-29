@@ -1,12 +1,9 @@
 package codeforces_solutions;
 
-import java.time.LocalDate;
-import java.util.List;
-
-public class Cat extends Animal{
+public class Cat extends Animal implements Runnable{
     private String breed;
 
-    public Cat(String name, double weight, Owner owner, LocalDate birthDay, List<Vaccination> vaccinations, Color color, String breed) {
+    public Cat(String name) {
         super(name, weight, owner, birthDay, vaccinations, color);
         this.breed = breed;
     }
@@ -14,9 +11,17 @@ public class Cat extends Animal{
     public String getBreed() {
         return breed;
     }
-    @Override
-    public void fly() {}
 
     @Override
-    public void swim() {}
+    public void fly() {
+    }
+
+    @Override
+    public void swim() {
+    }
+
+    @Override
+    public int getRunningSpeed() {
+        return 9;
+    }
 }

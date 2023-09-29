@@ -3,7 +3,7 @@ package codeforces_solutions;
 import java.time.LocalDate;
 import java.util.List;
 
-public class Shark extends Animal {
+public class Shark extends Animal implements Swimmable{
     public Shark(String name, double weight) {
 
         super(name);
@@ -14,4 +14,9 @@ public class Shark extends Animal {
 
     @Override
     public void fly() {}
+
+    @Override
+    public int getSwimmingSpeed() {
+        return 180;
+    }
 }

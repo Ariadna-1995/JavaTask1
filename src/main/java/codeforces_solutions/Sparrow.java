@@ -2,7 +2,7 @@ package codeforces_solutions;
 
 import java.time.LocalDate;
 import java.util.List;
-public class Sparrow extends Animal{
+public class Sparrow extends Animal implements Flyable{
     public Sparrow(String name) {
 
         super(name);
@@ -12,4 +12,9 @@ public class Sparrow extends Animal{
 
     @Override
     public void swim() {}
+
+    @Override
+    public int getFlightSpeed() {
+        return 200;
+    }
 }

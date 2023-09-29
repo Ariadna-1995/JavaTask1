@@ -3,7 +3,7 @@ package codeforces_solutions;
 import java.time.LocalDate;
 import java.util.List;
 
-public class Animal {
+public abstract class Animal {
     protected String name;
     protected double weight;
     protected Owner owner;
@@ -19,6 +19,8 @@ public class Animal {
         this.birthDay = birthDay;
         this.vaccinations = vaccinations;
         this.color = color;
+
+
     }
 
     public Animal(String name, double weight, Owner owner, LocalDate birthDay, Color color) {
@@ -92,7 +94,7 @@ public class Animal {
     public String getTYPE() {
         return TYPE;
     }
-    public void toGo() {
+    public void run() {
         System.out.println(this.TYPE + " двигается.");
     }
 
@@ -102,5 +104,16 @@ public class Animal {
 
     public void swim() {
         System.out.println(this.TYPE + " плавает.");
+    }
+
+    public void getSwimmingSpeed() {
+        return speed;
+
+    }
+    public void getFlightSpeed() {
+
+    }
+    public void getRunningSpeed() {
+
     }
 }
